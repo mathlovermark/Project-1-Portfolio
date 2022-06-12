@@ -1,0 +1,1005 @@
+/* Portfolio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(22, 38, 53);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+audio {
+    position: absolute;
+    top: 75px;
+    right: 25px;
+    height: 20px;
+    width: 35%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "mainpage mainpage mainpage"
+        "aboutme aboutme aboutme"
+        "skills skills skills"
+        "projects projects projects"
+        "contactme contactme contactme"
+        "footer footer footer"
+    ;
+}
+
+.item-1-header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(166, 213, 223);
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 2.5px 10px 5px rgb(22, 38, 53);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.item-2-mainpage {
+    grid-area: mainpage;
+    background-image: url(images/Nature.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item-3-aboutme {
+    grid-area: aboutme;
+    text-align: center;
+    padding: 15px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(166, 213, 223);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "aboutme-profile-pic"
+        "aboutme-profile-table"
+        "aboutme-hobbies"
+    ;
+}
+
+.item-4-skills {
+    grid-area: skills;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 70px 10px 10px 10px;
+    display: grid;
+    grid-template: auto;
+    grid-template-areas:
+        "skill-header"
+        "skill-item-1"
+        "skill-item-2"
+        "skill-item-3"
+        "skill-item-4"
+    ;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(22, 38, 53);
+    color: white;
+}
+
+.item-5-projects {
+    grid-area: projects;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    grid-template-areas:
+        "project-item-1 project-item-1 project-item-1"
+        "project-item-2 project-item-2 project-item-2"
+        "project-item-3 project-item-3 project-item-3"
+    ;
+    height: 100vh;
+    width: 100%;
+}
+
+.item-6-contactme {
+    grid-area: contactme;
+    margin-top: 50px;
+    height: 75vh;
+    width: 100%;
+    background-color: rgb(22, 38, 53);
+    color: white;
+    padding: 15px;
+}
+
+.item-7-footer {
+    grid-area: footer;
+    height: 15vh;
+    background-color: rgb(166, 213, 223);
+    text-align: center;
+    padding: 15px;
+    line-height: 1.5;
+    font-size: 0.85rem;
+}
+
+
+/* Navigation Bar */
+
+.navigation-brand {
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-weight: 900;
+    margin: 10px 20px 10px 10px;
+}
+
+.navigation-brand:hover {
+    color: white;
+}
+
+.navigation-item {
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+    font-size: .5rem;
+}
+
+.navigation-item a {
+    text-decoration: none;
+}
+
+.navigation-item i:hover {
+    color: white;
+    transform: scale(125%)
+}
+
+
+/* Main Page */
+
+.mainpage-introduction {
+    position: absolute;
+    width: 35%;
+    height: 20vh;
+    text-align: center;
+    top: 35vh;
+    left: 3%;
+    background-color: none;
+    box-sizing: border-box;
+}
+
+.mainpage-impression {
+    font-size: 8rem;
+    font-weight: 900;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.mainpage-impression:hover {
+    color: white;
+}
+
+.mainpage-text {
+    font-size: 1rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 15%;
+    width: 300px;
+}
+
+.mainpage-text span {
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/* About Me */
+
+.aboutme-profile-pic {
+    grid-area: aboutme-profile-pic;
+}
+
+.aboutme-profile-table {
+    grid-area: aboutme-profile-table;
+}
+
+.aboutme-hobbies {
+    grid-area: aboutme-hobbies;
+}
+
+.aboutme-profile-pic img {
+    width: 135x;
+    height: 135px;
+    margin: 60px 0px 10px 0px;
+    border-radius: 10%;
+    border: 1px solid rgb(22, 38, 53);
+    box-shadow: -5px 5px;
+}
+
+.aboutme-profile-table table {
+    font-size: .85rem;
+}
+
+.aboutme-profile-table table th {
+    text-align: right;
+    padding: 5px;
+}
+
+.aboutme-profile-table table td {
+    text-align: left;
+    padding: 5px;
+}
+
+.aboutme-hobbies {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.aboutme-hobbies li {
+    display: inline-block;
+}
+
+.aboutme-hobbies li>img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    border: 1px solid rgb(22, 38, 53);
+    border-radius: 5%;
+    box-shadow: 0px 5px;
+}
+
+
+/* My Skills */
+.skill-items {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.grid-skill-item1 {
+    grid-area: skill-header;
+    margin-bottom: 5px;
+}
+
+.grid-skill-item2 {
+    grid-area: skill-item-1;
+
+}
+
+.grid-skill-item3 {
+    grid-area: skill-item-2;
+}
+
+.grid-skill-item4 {
+    grid-area: skill-item-3;
+}
+
+.grid-skill-item5 {
+    grid-area: skill-item-4;
+}
+
+.grid-skill-item1 p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    align-self: center;
+}
+
+.grid-skill-item1 img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.skill-items img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.skill-items img:hover {
+    box-shadow: 0px 0px 20px 10px white;
+}
+
+.skill-items p {
+    color: white;
+    width: 75%;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: .80rem;
+}
+
+/* My Projects */
+.project-items {
+    padding: 10px;
+}
+
+.project-item-1 {
+    grid-area: project-item-1;
+    margin-top: 50px;
+
+}
+
+.project-item-2 {
+    grid-area: project-item-2;
+
+}
+
+.project-item-3 {
+    grid-area: project-item-3;
+}
+
+.project-items img {
+    width: 150px;
+    height: 75px;
+}
+
+.project-items p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: .75rem;
+}
+
+.project-items-description {
+    margin-bottom: 10px;
+}
+
+.project-items-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: rgb(22, 38, 53);
+}
+
+.project-items:hover {
+    box-shadow: 0px 0px 30px 15px rgb(22, 38, 53);
+}
+
+
+/* Contact Me  */
+.contact-me-page {
+    width: 100%;
+}
+
+.contactme-title {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: 900;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.contactme-description {
+    color: white;
+    text-align: center;
+    line-height: 1;
+    font-size: .85rem;
+}
+
+.form-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+form {
+    margin: auto;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+textarea {
+    margin: auto;
+    padding: 5px;
+}
+
+.form-container form>div {
+    margin: 5px;
+}
+
+.submit-button {
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 25%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: rgb(22, 38, 53);
+    font-family: Courier New;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 5px;
+    background-color: rgb(166, 213, 223);
+    ;
+    border: solid white 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-button:hover {
+    border: solid white 1px;
+    color: white;
+    background: rgb(22, 38, 53);
+    background-image: -webkit-linear-gradient(top, rgb(22, 38, 53), rgb(22, 38, 53));
+    background-image: -moz-linear-gradient(top, rgb(22, 38, 53), rgb(22, 38, 53));
+    background-image: -ms-linear-gradient(top, rgb(22, 38, 53), rgb(22, 38, 53));
+    background-image: -o-linear-gradient(top, rgb(22, 38, 53), rgb(22, 38, 53));
+    background-image: -webkit-gradient(to bottom, rgb(22, 38, 53), rgb(22, 38, 53));
+    -webkit-box-shadow: 0 -5px 10px 3px white;
+    -moz-box-shadow: 0 -5px 10px 3px white;
+    box-shadow: 0px -1px 15px 5px white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Footer  */
+
+.item-7-footer a {
+    font-size: 1.5rem;
+    margin: 0px 10px 0px 10px;
+}
+
+.item-7-footer i:hover {
+    color: #ffffff;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+    /* Web Page */
+    .grid-container {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "mainpage mainpage mainpage"
+            "aboutme skills skills"
+            "projects projects projects"
+            "contactme contactme contactme"
+            "footer footer footer"
+        ;
+    }
+
+    .item-1-header {
+        grid-area: header;
+        position: fixed;
+        height: 15vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 15%;
+    }
+
+    .item-4-skills {
+        padding: 100px 10px 10px 10px;
+    }
+
+    .item-6-contactme {
+        padding: 50px 15px 15px 15px;
+    }
+
+    .item-7-footer {
+        font-size: 1rem;
+    }
+
+    audio {
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        height: 20px;
+        width: 15%;
+    }
+
+    /* Navigation Bar */
+    .navigation-brand {
+        font-size: 4rem;
+    }
+
+    .navigation-item {
+        font-size: .75rem;
+    }
+
+    /* Main Page */
+    .mainpage-introduction {
+        width: 350px;
+        top: 25vh;
+        left: 27.5%;
+    }
+
+    .mainpage-impression {
+        font-size: 10rem;
+    }
+
+    .mainpage-text {
+        font-size: 1.5rem;
+        width: 350px;
+    }
+
+    .mainpage-text span {
+        font-size: 1.5rem;
+    }
+
+    /* About Me and Skill */
+
+    .aboutme-profile-pic img {
+        width: 125x;
+        height: 125px;
+        margin: 85px 0px 10px 0px;
+    }
+
+    .aboutme-profile-table table {
+        font-size: .75rem;
+    }
+
+    .aboutme-profile-table table th {
+        padding: 2.5px;
+    }
+
+    .aboutme-profile-table table td {
+        padding: 2.5px;
+    }
+
+    .aboutme-hobbies {
+        list-style-type: none;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .aboutme-hobbies li {
+        display: inline-block;
+    }
+
+    .aboutme-hobbies li>img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .grid-skill-item1 {
+        margin-bottom: 10px;
+    }
+
+    .grid-skill-item1 p {
+        font-size: 1.75rem;
+    }
+
+    .grid-skill-item1 img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .skill-items img {
+        height: 75px;
+        width: 75px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    .skill-items p {
+        font-size: .85rem;
+    }
+
+    /* Projects  */
+
+    .item-5-projects {
+        padding: 100px 30px 10px 30px;
+        grid-template: auto;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+            "project-item-1 project-item-1 project-item-2"
+            "project-item-1 project-item-1 project-item-3"
+        ;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .project-item-1 {
+        margin: 10px 30px 10px 10px;
+    }
+
+    .project-item-1 img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .project-item-1 .project-items-title {
+        font-size: 2rem;
+    }
+
+    .project-item-1 .project-items-description {
+        font-size: 1rem;
+    }
+
+    .project-items p {
+        text-align: center;
+        margin-top: 10px;
+        font-size: .75rem;
+    }
+
+    .project-items-description {
+        margin-bottom: 0px;
+    }
+
+    /* Contact Me  */
+    textarea {
+        height: 5em;
+        width: 40em;
+    }
+
+    .contactme-title {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .contactme-description {
+        line-height: 1.5;
+        font-size: .95rem;
+        margin-bottom: 10px;
+    }
+
+    .submit-button {
+        width: 25%;
+        font-size: 20px;
+    }
+
+    /* Footer  */
+
+    .item-7-footer a {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Web Page */
+    .grid-container {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "mainpage mainpage mainpage"
+            "aboutme skills skills"
+            "projects projects projects"
+            "contactme contactme contactme"
+            "footer footer footer"
+        ;
+    }
+
+    .item-1-header {
+        height: 15vh;
+        gap: 20%;
+    }
+
+    .item-4-skills {
+        padding: 100px 10px 10px 10px;
+    }
+
+    .item-6-contactme {
+        padding: 65px 15px 15px 15px;
+    }
+
+    .item-7-footer {
+        font-size: 1rem;
+    }
+
+    audio {
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        height: 20px;
+        width: 10%;
+    }
+
+    /* Navigation Bar */
+    .navigation-brand {
+        font-size: 4rem;
+    }
+
+    .navigation-item {
+        font-size: .90rem;
+        margin: 0px 10px 0px 10px;
+    }
+
+    /* Main Page */
+    .mainpage-introduction {
+        top: 27.5vh;
+        left: 32.5%;
+    }
+
+    .mainpage-impression {
+        font-size: 12rem;
+    }
+
+    .mainpage-text {
+        font-size: 1.25rem;
+    }
+
+    .mainpage-text span {
+        font-size: 1.25rem;
+    }
+
+    /* About Me and Skill */
+
+    .aboutme-profile-pic img {
+        width: 150x;
+        height: 150px;
+        margin: 100px 0px 10px 0px;
+    }
+
+    .aboutme-profile-table table {
+        font-size: 1rem;
+    }
+
+    .aboutme-profile-table table th {
+        padding: 2.5px;
+    }
+
+    .aboutme-profile-table table td {
+        padding: 2.5px;
+    }
+
+    .aboutme-hobbies li>img {
+        width: 90px;
+        height: 55px;
+    }
+
+    .grid-skill-item1 {
+        margin-bottom: 5px;
+    }
+
+    .grid-skill-item1 p {
+        font-size: 1.75rem;
+    }
+
+    .grid-skill-item1 img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .skill-items img {
+        height: 65px;
+        width: 65px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .skill-items p {
+        font-size: .85rem;
+        padding-left: 10px;
+    }
+
+    /* Projects  */
+
+    .item-5-projects {
+        padding: 125px 75px 10px 75px;
+    }
+
+    .project-item-1 img {
+        width: 350px;
+        height: 250px;
+    }
+
+    /* Contact Me  */
+    textarea {
+        height: 5em;
+        width: 45em;
+    }
+
+    .contactme-title {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .contactme-description {
+        line-height: 1.5;
+        font-size: .95rem;
+        margin-bottom: 5px;
+    }
+
+    .submit-button {
+        width: 30%;
+        font-size: 20px;
+    }
+
+    /* Footer  */
+
+    .item-7-footer a {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1440px) {
+
+    /* Web Page */
+    .grid-container {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "mainpage mainpage mainpage"
+            "aboutme skills skills"
+            "projects projects projects"
+            "contactme contactme contactme"
+            "footer footer footer"
+        ;
+    }
+
+    .item-1-header {
+        height: 15vh;
+        gap: 30%;
+    }
+
+    .item-4-skills {
+        padding: 50px 10px 10px 10px;
+    }
+
+    .item-6-contactme {
+        padding: 50px 15px 15px 15px;
+    }
+
+    .item-7-footer {
+        font-size: 1rem;
+    }
+
+    audio {
+        position: absolute;
+        top: 130px;
+        right: 35px;
+        height: 30px;
+        width: 10%;
+    }
+
+    /* Navigation Bar */
+    .navigation-brand {
+        font-size: 5rem;
+    }
+
+    .navigation-item {
+        font-size: 1rem;
+        margin: 0 15px 0 15px;
+    }
+
+    /* Main Page */
+    .mainpage-introduction {
+        width: 600px;
+        top: 30vh;
+        left: 27.5%;
+    }
+
+    .mainpage-impression {
+        font-size: 12.5rem;
+    }
+
+    .mainpage-text {
+        font-size: 2rem;
+        width: 600px;
+    }
+
+    .mainpage-text span {
+        font-size: 2rem;
+    }
+
+    /* About Me and Skill */
+
+    .aboutme-profile-pic img {
+        width: 175px;
+        height: 175px;
+        margin: 100px 0px 10px 0px;
+    }
+
+    .aboutme-profile-table table {
+        font-size: 1rem;
+    }
+
+    .aboutme-profile-table table th {
+        padding: 5px;
+    }
+
+    .aboutme-profile-table table td {
+        padding: 5px;
+    }
+
+    .aboutme-hobbies {
+        font-size: 1.25rem;
+    }
+
+    .aboutme-hobbies li>img {
+        width: 90px;
+        height: 60px;
+    }
+
+    .grid-skill-item1 {
+        margin-bottom: 30px;
+    }
+
+    .grid-skill-item1 p {
+        font-size: 3rem;
+        margin-top: 50px;
+    }
+
+    .grid-skill-item1 img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .skill-items img {
+        height: 80px;
+        width: 80px;
+        margin-left: 60px;
+        margin-right: 40px;
+    }
+
+    .skill-items p {
+        font-size: .85rem;
+    }
+
+    /* Projects  */
+
+    .item-5-projects {
+        padding: 100px 200px 10px 200px;
+        grid-template: auto;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+            "project-item-1 project-item-1 project-item-2"
+            "project-item-1 project-item-1 project-item-3"
+        ;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .project-item-1 {
+        margin: 10px 50px 10px 10px;
+    }
+
+    .project-item-1 img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .project-item-1 .project-items-title {
+        font-size: 2rem;
+    }
+
+    .project-item-1 .project-items-description {
+        font-size: 1rem;
+    }
+
+    .project-items p {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .project-items-description {
+        margin-bottom: 0px;
+    }
+
+    /* Contact Me  */
+    textarea {
+        height: 7em;
+        width: 50em;
+    }
+
+
+}
